@@ -1,0 +1,16 @@
+def get_programmer_ending(n):
+    if n%10==1 and n%100 !=11:
+        ending ="программист"
+    elif n%10 in (2,3,4) and n%100 not in (12,13,14):
+        ending="программиста"
+    else:
+        ending="программистов"
+    return ending
+    
+num_programmers = int(input("Сколько в аудитории программистов?"))
+
+if num_programmers <1:
+    print("Кажется здесь никого нет...")
+else :
+    ending=ger_programmer_ending(num_programmers)
+    print("Привет! Не ожидал,что тут целых {num_programmers} {ending}! Прекрасно!")
